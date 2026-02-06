@@ -1,6 +1,6 @@
 // ====== CONFIG ======
 // Option A (recommended): put your own default playlist ID here.
-const DEFAULT_PLAYLIST_ID = "PLU6rw98nc2JpxuUT_t89iL8CBxQWDrBNh";
+const DEFAULT_PLAYLIST_ID = "PL8e1s4piN_DzrmcNLGYCXjjmIP5tkbZpE";
 
 // Option B: enable user-pasted playlists via YouTube Data API.
 // For a quick prototype you can put the API key here. If you ever publish,

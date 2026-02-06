@@ -196,13 +196,17 @@ function onPlayerStateChange(e) {
 }
 
 function applyTheme(themeClass) {
-  document.body.classList.remove("theme-default","theme-vaporwave", "theme-emo");
+  document.body.classList.remove("theme-default","theme-synthwave", "theme-emo","theme-heavy","theme-lofi");
   if (themeClass) document.body.classList.add(themeClass);
 }
 
 async function switchPlaylist(key) {
   const p = PLAYLISTS[key];
   if (!p) return;
+
+  const descEl = document.getElementById("themeDescription");
+if (descEl) descEl.textContent = PLAYLISTS[key]?.description || "";
+
 
   currentPlaylistId = p.playlistId;
   applyTheme(p.theme);
