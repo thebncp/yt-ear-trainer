@@ -9,19 +9,33 @@
 body { background: var(--bg); color: var(--text); }
 .header, .playerCard, .sidebar { background: var(--card); border-color: var(--border); }
 
-body.theme-vaporwave {
+body.theme-synthwave {
   --bg: #fff3fb;
   --card: #ffffff;
   --text: #111;
   --border: #f0b7dc;
 }
-
-body.theme-emo {
+body.theme-heavy {
   --bg: #0f0f12;
   --card: #16161c;
-  --text: #f2f2f2;
+  --text: #2a2a33;
   --border: #2a2a33;
 }
+
+body.theme-emo {
+  --bg: #2596be;
+  --card: #16161c;
+  --text: #2a2a33;
+  --border: #f5b572;
+}
+
+body.theme-lofi {
+  --bg: #f6f3ff;
+  --card: #ffffff;
+  --text: #111;
+  --border: #d8ccff;
+}
+
 
 
   * { box-sizing: border-box; }
