@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YouTube Ear Trainer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <h1>YouTube Ear Trainer</h1>
+
+      <div class="row">
+        <label class="toggle">
+          <input id="strictToggle" type="checkbox" checked />
+          <span>Strict hide</span>
+        </label>
+
+        <label class="toggle">
+          <input id="autoNextToggle" type="checkbox" checked />
+          <span>Auto-next on end</span>
+        </label>
+      </div>
+
+      <div class="row">
+        <input
+          id="playlistUrlInput"
+          type="url"
+          placeholder="Paste playlist URL (e.g., https://www.youtube.com/playlist?list=...)"
+          autocomplete="off"
+        />
+        <button id="loadPlaylistBtn" type="button">Load</button>
+      </div>
+      <div class="row">
+  <button class="playlistBtn" data-playlist="default">Default</button>
+  <button class="playlistBtn" data-playlist="vaporwave">Vaporwave</button>
+  <button class="playlistBtn" data-playlist="emo">Emo</button>
+</div>
+
+
+      <p id="status" class="status">Ready.</p>
+    </header>
+
+    <section class="content">
+      <div class="playerCard">
+        <div class="playerTop">
+          <div class="meta">
+            <div class="metaLabel">Uploader</div>
+            <div id="uploaderName" class="metaValue">—</div>
+          </div>
+
+          <div class="meta metaRight" id="revealMeta">
+            <div class="metaLabel">Title</div>
+            <div id="videoTitle" class="metaValue">—</div>
+            <a id="openOnYouTube" class="link" href="#" target="_blank" rel="noreferrer">Open on YouTube</a>
+          </div>
+        </div>
+
+        <!-- IMPORTANT: no overlays covering the player; strict mode only shrinks it -->
+        <div id="playerFrameWrap" class="playerFrameWrap">
+          <div id="player"></div>
+        </div>
+
+        <div class="controls">
+          <button id="playPauseBtn" type="button">Play</button>
+          <button id="restartBtn" type="button">Restart</button>
+          <button id="rewindBtn" type="button">-10s</button>
+          <button id="forwardBtn" type="button">+10s</button>
+          <button id="nextBtn" type="button">Next (Random)</button>
+          <button id="revealBtn" type="button">Reveal</button>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <h2>Queue</h2>
+        <div class="small">
+          <div>Playlist: <span id="playlistIdLabel">—</span></div>
+          <div>Items loaded: <span id="countLabel">0</span></div>
+          <div>Current index: <span id="indexLabel">—</span></div>
+        </div>
+        <button id="reshuffleBtn" type="button">Reshuffle</button>
+        <label class="toggle">
+          <input id="showHistoryTitlesToggle" type="checkbox" />
+          <span>Show titles in history</span>
+        </label>
+        <ol id="historyList" class="history"></ol>
+      </aside>
+    </section>
+  </main>
+
+  <script src="js/shuffle.js"></script>
+  <script src="js/playlist.js"></script>
+  <script src="js/youtube.js"></script>
+  <script src="js/playlists_config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
