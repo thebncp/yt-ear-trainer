@@ -4,4 +4,6 @@ Most backing tracks uploaded to youtube include the key in the title of the vide
 
 To check if you were correct as well as to see the full youtube title and get a link to the video hosted on youtube, you can toggle strict mode on and off which will make the embed full size and reveal the video title. You can also see a list of video titles in the sidebar if you so choose. I recommend keeping this off until you want to reference what videos you have watched as this will again more often than not reveal the key or scale. 
 
-I plan to add additional playlist options in the future, and the current playlists will continue to be added to. 
+I plan to add additional playlist options in the future, and the current playlists will continue to have songs added.
+
+Please note their is an error on startup that I am trying to fix. If a video doesn't load immediately, clicking the shuffle button or selecting one of the playlist presets should load a video.
